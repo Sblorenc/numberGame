@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${boundText}"></p>
+<p th:text="${limitText}"></p>
+<p th:text="${response}"></p>
+<form  th:action="@{/game}" method="post">
+    <p><input type="number" th:name="playerNumber"></p>
+    <p><input type="hidden" th:value="${generatedNumber}" th:name="generatedNumber"></p>
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>

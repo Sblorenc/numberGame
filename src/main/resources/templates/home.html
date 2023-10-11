@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<p>Input upperbound</p>
+<form  id="homeForm" th:action="@{/home}" method="post">
+  <p>Upperbound
+      <select id="bound" th:name="bound">
+      <option th:value="10" th:text="10"></option>
+          <option th:value="50" th:text="50"></option>
+          <option th:value="100" th:text="100"></option>
+      </select>
+  </p>
+    <p>Tries<select id="limit" th:name="limit">
+        <option th:value="1" th:text="1"></option>
+        <option th:value="5" th:text="5"></option>
+        <option th:value="10" th:text="10"></option>
+    </select></p>
+  <p><input type="submit"></p>
+</form>
+</body>
+</html>
